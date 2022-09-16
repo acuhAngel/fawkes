@@ -2,6 +2,7 @@ defmodule Fawkes.Chat.Room do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @derive {Jason.Encoder, except: [:__meta__]}
   schema "rooms" do
     field :desc, :string
     field :name, :string
